@@ -2,11 +2,11 @@
 
 ## usage 
 ```
-// append file 
-appendFilePromise('sample.csv','あしかわ,あしかわ,あしかわ\n','utf8')
-.then(function(){
-  console.log('write done')
-})
+let path = require('path')
+let csvUtil = require('./csv-util')
+let CSVWriter = csvUtil.CSVWriter
+let csvParser = csvUtil.csvParser
+
 
 // parser csv
 let csvData = csvParser('sample.csv',function(row){
